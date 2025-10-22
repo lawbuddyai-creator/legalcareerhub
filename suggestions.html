@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Have ideas or feedback? Use our suggestion box to share your thoughts and help us improve Legal Career Hub.">
+  <meta name="keywords" content="suggestion box, feedback form, contact us">
+  <title>Legal Career Hub | Suggestion Box</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <nav>
+      <a href="index.html" class="logo">Legal Career Hub</a>
+      <ul class="nav-links">
+        <li><a href="career.html">Career Paths</a></li>
+        <li><a href="path.html">Path to Law School</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="good-colleges.html">Good Colleges</a></li>
+        <li><a href="suggestions.html">Suggestion Box</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+
+  <section id="suggestions" class="section">
+    <h2>Suggestion Box</h2>
+    <p>We value your ideas! If you have feedback, suggestions for additional resources or topics you’d like to see, please share them below. Your input helps us make this site better for students exploring legal careers.</p>
+    <form class="suggestion-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="message">Suggestion</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your suggestion..." required></textarea>
+
+      <button type="submit" class="btn">Send Suggestion</button>
+    </form>
+    <p class="alt-contact">Prefer emailing directly? You can also send suggestions to <a href="mailto:your-email@example.com?subject=Suggestion%20for%20Legal%20Career%20Hub">your-email@example.com</a>.</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Legal Career Hub | Made by Aryan Patel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
