@@ -17,10 +17,15 @@
         <li><a href="career.html">Career Paths</a></li>
         <li><a href="path.html">Path to Law School</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="faq.html">FAQs</a></li>
         <li><a href="inspiration.html">Inspiration</a></li>
         <li><a href="good-colleges.html">Good Colleges</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="suggestions.html">Suggestion Box</a></li>
       </ul>
+      <!-- Dark mode toggle -->
+      <button id="dark-toggle" class="dark-toggle" aria-label="Switch to dark mode">🌙</button>
       <button class="nav-toggle" aria-label="Toggle navigation menu">
         <span class="hamburger"></span>
       </button>
@@ -29,6 +34,10 @@
 
   <section id="career-paths" class="section">
     <h2>Career&nbsp;Paths</h2>
+    <!-- Search bar for filtering careers -->
+    <div class="search-bar">
+      <input type="text" id="career-search" placeholder="Search careers..." aria-label="Search careers">
+    </div>
     <div class="card-grid">
       <!-- Defense Attorney -->
       <article class="card">
@@ -41,6 +50,17 @@
           <li><strong>Average salary:</strong> ~ $151,160 (median for lawyers)</li>
           <li><strong>Why it matters:</strong> Ensures fair representation in criminal cases and upholds due‑process rights.</li>
         </ul>
+        <details>
+          <summary>More details</summary>
+          <div class="accordion-content">
+            <h4>Day in the Life</h4>
+            <p>Defense attorneys meet with clients, review evidence, negotiate plea agreements and advocate in court. They spend significant time researching case law and preparing legal strategies.</p>
+            <h4>Pros &amp; Cons</h4>
+            <p><strong>Pros:</strong> Advocate for individual rights, intellectually stimulating cases, variety of legal issues.<br><strong>Cons:</strong> Heavy caseloads, emotionally challenging cases and long hours.</p>
+            <h4>Tips</h4>
+            <p>Develop strong negotiation skills, intern with a public defender’s office and network with experienced criminal defense attorneys.</p>
+          </div>
+        </details>
       </article>
       <!-- Prosecutor -->
       <article class="card">
@@ -53,6 +73,17 @@
           <li><strong>Average salary:</strong> ~ $151,160 (median for lawyers)</li>
           <li><strong>Why it matters:</strong> Protects society by prosecuting crimes while ensuring justice is served fairly.</li>
         </ul>
+        <details>
+          <summary>More details</summary>
+          <div class="accordion-content">
+            <h4>Day in the Life</h4>
+            <p>Prosecutors review police reports, decide whether to file charges, negotiate plea deals and present evidence in court. They work closely with law enforcement and victims.</p>
+            <h4>Pros &amp; Cons</h4>
+            <p><strong>Pros:</strong> Serve the public interest, develop trial skills, influence public safety.<br><strong>Cons:</strong> Heavy caseload, political pressures and high public scrutiny.</p>
+            <h4>Tips</h4>
+            <p>Gain courtroom experience through moot court, volunteer at a district attorney’s office and maintain high ethical standards.</p>
+          </div>
+        </details>
       </article>
       <!-- Judge -->
       <article class="card">
@@ -65,6 +96,17 @@
           <li><strong>Average salary:</strong> ~ $135,160</li>
           <li><strong>Why it matters:</strong> Ensures justice and fairness in the legal system by applying and interpreting laws.</li>
         </ul>
+        <details>
+          <summary>More details</summary>
+          <div class="accordion-content">
+            <h4>Day in the Life</h4>
+            <p>Judges preside over hearings and trials, rule on motions, and write opinions. They research legal issues and manage their docket of cases.</p>
+            <h4>Pros &amp; Cons</h4>
+            <p><strong>Pros:</strong> Uphold the rule of law, shape legal precedent, respected position.<br><strong>Cons:</strong> Heavy responsibility, isolating role, limited advocacy.</p>
+            <h4>Tips</h4>
+            <p>Build broad legal experience, cultivate impartiality and pursue positions such as clerkships or magistrate roles.</p>
+          </div>
+        </details>
       </article>
       <!-- Paralegal -->
       <article class="card">
@@ -77,6 +119,17 @@
           <li><strong>Average salary:</strong> ~ $61,010</li>
           <li><strong>Why it matters:</strong> Increases efficiency and accuracy within legal teams by providing essential support.</li>
         </ul>
+        <details>
+          <summary>More details</summary>
+          <div class="accordion-content">
+            <h4>Day in the Life</h4>
+            <p>Paralegals perform legal research, draft pleadings and correspondence, organise files and assist attorneys during trials and meetings.</p>
+            <h4>Pros &amp; Cons</h4>
+            <p><strong>Pros:</strong> Entry into legal field without a J.D., varied tasks, opportunity to learn from lawyers.<br><strong>Cons:</strong> Limited advancement, high workloads and tight deadlines.</p>
+            <h4>Tips</h4>
+            <p>Earn a paralegal certificate, specialise in a practice area, and develop strong organisational skills.</p>
+          </div>
+        </details>
       </article>
       <!-- Policy Analyst / Law Clerk -->
       <article class="card">
@@ -89,8 +142,46 @@
           <li><strong>Average salary:</strong> Policy analysts earn about $137,600; law clerks earn about $60,400</li>
           <li><strong>Why it matters:</strong> Shapes public policy and supports the judiciary by providing research and analysis.</li>
         </ul>
+        <details>
+          <summary>More details</summary>
+          <div class="accordion-content">
+            <h4>Day in the Life</h4>
+            <p>Policy analysts research legislative proposals, evaluate the impact of policies and prepare reports. Law clerks review case law, draft memos and assist judges during trials.</p>
+            <h4>Pros &amp; Cons</h4>
+            <p><strong>Pros:</strong> Influence public policy, intellectually stimulating research, exposure to high-level legal reasoning.<br><strong>Cons:</strong> Tight deadlines, possible political pressures and limited control over outcomes.</p>
+            <h4>Tips</h4>
+            <p>Hone your analytical writing, stay informed on current affairs and seek clerkships or internships in government agencies or courts.</p>
+          </div>
+        </details>
       </article>
     </div>
+
+    <!-- Career Map showing progression through legal roles -->
+    <section id="career-map" class="section" style="padding-top: 2rem;">
+      <h3>Law Career Map</h3>
+      <p style="text-align:center; max-width:700px; margin:0 auto 1rem;">This simple map illustrates one possible progression through legal roles. Your path may differ, but the map shows how early experiences can lead toward advanced positions.</p>
+      <div class="career-map" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1rem; font-size:0.9rem;">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <img src="assets/paralegal.png" alt="Paralegal icon" width="40" height="40">
+          <span>Paralegal</span>
+        </div>
+        <span style="font-size:1.5rem;">→</span>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <img src="assets/policy.png" alt="Law clerk icon" width="40" height="40">
+          <span>Law Clerk</span>
+        </div>
+        <span style="font-size:1.5rem;">→</span>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <img src="assets/defense.png" alt="Attorney icon" width="40" height="40">
+          <span>Attorney</span>
+        </div>
+        <span style="font-size:1.5rem;">→</span>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <img src="assets/judge.png" alt="Judge icon" width="40" height="40">
+          <span>Judge</span>
+        </div>
+      </div>
+    </section>
   </section>
 
   <footer class="footer">

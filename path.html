@@ -17,10 +17,15 @@
         <li><a href="career.html">Career Paths</a></li>
         <li><a href="path.html">Path to Law School</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="faq.html">FAQs</a></li>
         <li><a href="inspiration.html">Inspiration</a></li>
         <li><a href="good-colleges.html">Good Colleges</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="suggestions.html">Suggestion Box</a></li>
       </ul>
+      <!-- Dark mode toggle -->
+      <button id="dark-toggle" class="dark-toggle" aria-label="Switch to dark mode">🌙</button>
       <button class="nav-toggle" aria-label="Toggle navigation menu">
         <span class="hamburger"></span>
       </button>
@@ -29,42 +34,46 @@
 
   <section id="path" class="section">
     <h2>Path to Law School</h2>
-    <div class="timeline">
-      <div class="step">
+    <div id="timeline-container">
+      <div class="timeline-step">
         <div class="circle">1</div>
         <h4>High School</h4>
         <p>Focus on academics, join debate or mock trial, and hone your writing and speaking skills.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">2</div>
         <h4>College</h4>
         <p>Earn a bachelor’s degree in any major while maintaining a strong GPA.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">3</div>
         <h4>LSAT or GRE</h4>
         <p>Prepare for and take the LSAT or GRE to meet law school admission requirements.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">4</div>
         <h4>Law School</h4>
         <p>Complete a 3‑year Juris Doctor (J.D.) program, participating in moot court and clinics.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">5</div>
         <h4>Internships / Clerkships</h4>
         <p>Gain hands‑on experience through internships, summer associate programs and judicial clerkships.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">6</div>
         <h4>Bar Exam</h4>
         <p>Pass the bar exam in your jurisdiction to become a licensed attorney.</p>
       </div>
-      <div class="step">
+      <div class="timeline-step">
         <div class="circle">7</div>
         <h4>Specialisation</h4>
         <p>Pursue a practice area (e.g., criminal, corporate, environmental) and continue professional development.</p>
       </div>
+    </div>
+    <div class="timeline-navigation">
+      <button id="timeline-prev" type="button">Previous</button>
+      <button id="timeline-next" type="button">Next</button>
     </div>
   </section>
 
