@@ -3,15 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  // Toggle the mobile navigation menu
+  // Toggle the navigation dropdown on click. Also animate the hamburger into a cross by toggling `active` on the button.
   navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active');
   });
 
-  // Close the mobile menu when a navigation link is clicked
+  // Close the dropdown and reset the hamburger when any nav link is clicked.
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      navToggle.classList.remove('active');
     });
   });
 
@@ -182,50 +184,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Simple chatbot functionality =====
-  const chatForm = document.getElementById('chat-form');
-  if (chatForm) {
-    const chatMessages = document.getElementById('chat-messages');
-    const chatInput = document.getElementById('chat-input');
-
-    function addMessage(type, text) {
-      const msgDiv = document.createElement('div');
-      msgDiv.className = `chat-message ${type}`;
-      msgDiv.textContent = text;
-      chatMessages.appendChild(msgDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    chatForm.addEventListener('submit', event => {
-      event.preventDefault();
-      const userText = chatInput.value.trim();
-      if (!userText) return;
-      addMessage('user', userText);
-      // Determine bot response based on keywords
-      const lower = userText.toLowerCase();
-      let response = '';
-      if (lower.includes('become') && lower.includes('lawyer')) {
-        response = 'To become a lawyer you typically earn a bachelor’s degree, take the LSAT, attend law school, complete internships or clerkships, pass the bar exam and meet character and fitness requirements.';
-      } else if (lower.includes('major') && (lower.includes('law') || lower.includes('prelaw'))) {
-        response = 'Law schools don’t require a specific major. Choose a field you enjoy and excel in—common majors include history, political science, psychology, English and economics.';
-      } else if (lower.includes('lsat') && lower.includes('hard')) {
-        response = 'The LSAT is challenging because of its complex questions and strict time limits. With preparation, most test takers score between 150 and 159.';
-      } else if (lower.includes('work') && lower.includes('law school')) {
-        response = 'Law school is demanding. Many schools discourage working during the first year; if you do work, limit it to about 20 hours per week so you can focus on studies.';
-      } else if (lower.includes('nextgen')) {
-        response = 'The NextGen Uniform Bar Exam launches in July 2026. It uses integrated question sets to test foundational lawyering skills and balances litigation and transactional practice.';
-      } else if (lower.includes('apply') && lower.includes('law school')) {
-        response = 'Submit your law school applications early in the cycle. Applying by the end of October is strategic, November is still early, and applications submitted by December are usually considered on time.';
-      } else if (lower.includes('bar exam') || lower.includes('ube')) {
-        response = 'Most states use the Uniform Bar Exam (UBE) consisting of the MBE, MEE and MPT. Scores can be transferred among participating jurisdictions. Non‑UBE states have their own exams and policies.';
-      } else {
-        response = 'Thanks for your question! Please explore the site’s resources or try rephrasing your question for more specific guidance.';
-      }
-      // Simulate slight delay before bot responds
-      setTimeout(() => {
-        addMessage('bot', response);
-      }, 500);
-      chatInput.value = '';
-    });
-  }
+  // ===== Chatbot functionality removed. =====
 });

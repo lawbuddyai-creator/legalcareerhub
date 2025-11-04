@@ -2,13 +2,15 @@
  * Global styles and colour palette for the Legal Career Hub website.
  * Colours: navy, gold, white and subtle light grey for backgrounds.
  */
+/* Test comment inserted by patch */
 
 :root {
-  --navy: #0a2342;
-  --gold: #d4af37;
-  --light: #f7f9fc;
-  --white: #ffffff;
-  --border: #e2e8f0;
+  /* Updated colour palette for a richer black‑and‑gold theme */
+  --navy: #121212;
+  --gold: #c7a653;
+  --light: #191919;
+  --white: #f5f5f5;
+  --border: #2a2a2a;
 }
 
 /*
@@ -18,10 +20,10 @@
  */
 body.dark {
   --navy: #f7f9fc;
-  --gold: #d4af37;
-  --light: #0a2342;
-  --white: #0a2342;
-  --border: #344e7d;
+  --gold: #c7a653;
+  --light: #ffffff;
+  --white: #121212;
+  --border: #e2e8f0;
 }
 
 html {
@@ -31,8 +33,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* Use flexbox to ensure the footer sits at the bottom of the viewport */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: "Georgia", "Times New Roman", serif;
-  color: var(--navy);
+  color: var(--white);
   background-color: var(--light);
   line-height: 1.6;
 }
@@ -861,4 +867,239 @@ body.dark .quiz-form {
 body.dark .quiz-result {
   background-color: var(--light);
   border-color: var(--border);
+}
+
+/*
+ * Overrides and enhancements for the black‑and‑gold redesign
+ * These rules are appended after the existing CSS to override defaults.
+ */
+
+/* Navigation styling */
+.navbar {
+  background-color: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.navbar nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  position: relative;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+/* Navigation links dropdown */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--navy);
+  border-top: 1px solid var(--border);
+  display: none;
+  flex-direction: column;
+  animation: fadeDown 0.3s ease forwards;
+}
+.nav-links.open {
+  display: flex;
+}
+.nav-links li {
+  width: 100%;
+}
+.nav-links a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--gold);
+}
+/* Menu toggle button */
+.nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1000;
+}
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--gold);
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+.nav-toggle.active .hamburger {
+  transform: rotate(45deg);
+}
+.nav-toggle.active .hamburger::before {
+  transform: rotate(-90deg) translate(-8px,0);
+}
+.nav-toggle.active .hamburger::after {
+  opacity: 0;
+}
+/* Dark mode button styling */
+.dark-toggle {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+.dark-toggle:hover {
+  color: var(--white);
+}
+
+/* Hero enhancements */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+  background-color: var(--navy);
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+}
+.hero-content {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: var(--gold);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+.hero-image {
+  max-width: 350px;
+  width: 100%;
+  margin-top: 1rem;
+  flex: 1;
+}
+.btn {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #b8953f;
+}
+
+/* Section headings coloured gold */
+.section h2 {
+  color: var(--gold);
+}
+
+/* Cards dark background */
+.card {
+  background-color: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.card h3 {
+  color: var(--gold);
+}
+.card ul li strong {
+  color: var(--gold);
+}
+
+/* Timeline step dark background */
+.timeline-step {
+  background-color: var(--navy);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Accordions dark background */
+details {
+  background-color: var(--navy);
+}
+
+/* FAQ panels dark background */
+.faq-item details {
+  background-color: var(--navy);
+}
+
+/* Keyframes for hero fade */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
