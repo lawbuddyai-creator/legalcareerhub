@@ -3,72 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO metadata -->
-  <meta name="description" content="Legal Career Hub is a comprehensive resource for high school and college students exploring careers in law. Learn about different legal professions, understand the path to law school, find helpful resources, discover top law schools and be inspired by notable figures in the legal field.">
-  <meta name="keywords" content="law careers, legal careers, defense attorney, prosecutor, judge, paralegal, policy analyst, law clerk, law school, pre‑law, LSAT prep, legal resources, legal organizations, top law schools">
-  <title>Legal Career Hub | Home</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <!-- Stylesheet -->
+  <title>Legal Career Hub - Virginia</title>
+  <meta name="description" content="Explore legal career paths, law school guidance, scholarships and Virginia-specific resources.">
+  <meta name="keywords" content="law careers, high school law, prelaw resources, LSAT basics, Virginia legal education">
+  <meta property="og:title" content="Legal Career Hub">
+  <meta property="og:description" content="Your complete guide to exploring careers in law — built for students.">
+  <meta property="og:image" content="images/hero.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="">
 </head>
 <body>
-  <!-- Navigation bar -->
-  <header class="navbar">
-    <nav>
-      <a href="index.html" class="logo">Legal Career Hub</a>
-      <ul class="nav-links">
-        <li><a href="career.html">Career Paths</a></li>
-        <li><a href="path.html">Path to Law School</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="quiz.html">Career Quiz</a></li>
-        <li><a href="reading.html">Reading List</a></li>
-        <li><a href="scholarships.html">Scholarships</a></li>
-        <li><a href="faq.html">FAQs</a></li>
-        <li><a href="inspiration.html">Inspiration</a></li>
-        <li><a href="good-colleges.html">Good Colleges</a></li>
-        <li><a href="bar.html">Bar Exam</a></li>
-        <li><a href="applications.html">Applications</a></li>
-        <li><a href="glossary.html">Glossary</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="suggestions.html">Suggestion Box</a></li>
-      </ul>
-      <!-- Dark mode toggle -->
-      <button id="dark-toggle" class="dark-toggle" aria-label="Switch to dark mode">🌙</button>
-      <!-- Mobile menu toggle (hidden on desktop) -->
-      <button class="nav-toggle" aria-label="Toggle navigation menu">
-        <span class="hamburger"></span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Hero section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Chart Your Path to a Career in Law</h1>
-      <p>Welcome to Legal Career Hub – your comprehensive resource for exploring legal careers, understanding the journey to law school, and discovering top schools and opportunities.</p>
-      <a href="career.html" class="btn">Explore Careers</a>
+  <div class="progress-container"><div class="progress-bar"></div></div>
+  <header>
+    <div class="navbar">
+      <div class="logo">Legal Career Hub</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#career-paths">Career Paths</a></li>
+          <li><a href="#timeline">Path to Law School</a></li>
+          <li><a href="#scholarships">Scholarships</a></li>
+          <li><a href="virginia.html">Virginia Resources</a></li>
+        </ul>
+      </nav>
     </div>
-    <img src="assets/hero.png" alt="Scales of justice icon" class="hero-image">
-  </section>
+  </header>
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Legal Career Hub</h1>
+        <p>Your complete guide to exploring careers in law — built for students.</p>
+        <a href="#career-paths" class="btn">Explore Career Paths</a>
+      </div>
+    </section>
 
-  <section class="section" id="overview">
-    <h2>What You'll Find Here</h2>
-    <p>Legal Career Hub was built for students like you who are curious about the legal profession. On this site you will discover detailed career guides, a step‑by‑step timeline to law school, curated resources for mock trial and internships, inspirational stories of trailblazing jurists and a list of top law schools. Use the navigation above to explore each section.</p>
-  </section>
+    <!-- Feature Cards -->
+    <section id="features" class="fade-in">
+      <h2 class="section-title">Discover Your Path</h2>
+      <p class="section-subtitle">Whether you're just getting started or ready to apply to law school, we've got you covered.</p>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Career Paths</h3>
+          <ul>
+            <li>Learn about different legal professions</li>
+            <li>Compare salaries and responsibilities</li>
+            <li>Find your perfect fit</li>
+          </ul>
+          <a href="#career-paths" class="link-button">Learn More <span class="arrow">→</span></a>
+        </div>
+        <div class="feature-card">
+          <h3>Path to Law School</h3>
+          <ul>
+            <li>Understand the journey from high school to JD</li>
+            <li>LSAT tips and application guidance</li>
+            <li>Timeline of key milestones</li>
+          </ul>
+          <a href="#timeline" class="link-button">Learn More <span class="arrow">→</span></a>
+        </div>
+        <div class="feature-card">
+          <h3>Scholarships</h3>
+          <ul>
+            <li>Explore funding opportunities</li>
+            <li>Sort by amount and deadline</li>
+            <li>Plan your application strategy</li>
+          </ul>
+          <a href="#scholarships" class="link-button">Learn More <span class="arrow">→</span></a>
+        </div>
+        <div class="feature-card">
+          <h3>Virginia Resources</h3>
+          <ul>
+            <li>State-specific law school data</li>
+            <li>Internships and programs</li>
+            <li>Legal aid and opportunities</li>
+          </ul>
+          <a href="virginia.html" class="link-button">Explore Virginia <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Quote of the day -->
-  <section class="section" id="quote-section">
-    <div id="quote-of-day" class="quote-day" style="text-align:center;font-style:italic;color:var(--gold);"></div>
-  </section>
+    <!-- Career Paths Section -->
+    <section id="career-paths" class="fade-in">
+      <h2 class="section-title">Career Paths</h2>
+      <p class="section-subtitle">Explore different roles in the legal field to see what suits you best.</p>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Corporate Lawyer</h3>
+          <ul>
+            <li>Advise businesses on legal rights and obligations</li>
+            <li>Draft contracts and negotiate deals</li>
+            <li>Requires JD and bar admission</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>Criminal Defense Attorney</h3>
+          <ul>
+            <li>Represent clients accused of crimes</li>
+            <li>Conduct trials and plea negotiations</li>
+            <li>Strong litigation skills needed</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>IP Lawyer</h3>
+          <ul>
+            <li>Protect intellectual property rights</li>
+            <li>Draft patents and trademarks</li>
+            <li>Often requires technical background</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>Government Attorney</h3>
+          <ul>
+            <li>Serve public agencies and officials</li>
+            <li>Draft laws and advise on policy</li>
+            <li>Opportunities at state and federal levels</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>Judge/Judicial Clerk</h3>
+          <ul>
+            <li>Oversee court proceedings</li>
+            <li>Conduct legal research and draft opinions</li>
+            <li>Clerkship as path to judgeship</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Legal Career Hub | Made by Aryan Patel</p>
+    <!-- Timeline Section -->
+    <section id="timeline" class="fade-in">
+      <h2 class="section-title">Your Path to Law School</h2>
+      <p class="section-subtitle">Follow these steps to start your legal journey.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="content">
+            <h4>High School</h4>
+            <p>Focus on academics, join debate or mock trial clubs, and develop strong writing and critical thinking skills.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h4>College</h4>
+            <p>Earn a bachelor's degree in any major while maintaining a strong GPA and engaging in extracurricular activities.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h4>LSAT Prep</h4>
+            <p>Prepare for and take the LSAT to demonstrate your aptitude for law school admissions.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h4>Apply to Law School</h4>
+            <p>Gather letters of recommendation, write a personal statement, and submit applications to ABA-accredited schools.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h4>Law School (1L–3L)</h4>
+            <p>Complete your Juris Doctor degree by taking foundational courses, internships, and preparing for the bar exam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scholarships Section -->
+    <section id="scholarships" class="fade-in">
+      <h2 class="section-title">Scholarships</h2>
+      <p class="section-subtitle">Search for scholarships that can support your legal education.</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Scholarship Name</th>
+              <th>Amount</th>
+              <th>Deadline</th>
+              <th>GPA Required</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Future Lawyers Scholarship</td>
+              <td>$2,500</td>
+              <td>March 1, 2026</td>
+              <td>3.0+</td>
+              <td><a href="#" target="_blank">Apply</a></td>
+            </tr>
+            <tr>
+              <td>Law Career Diversity Fund</td>
+              <td>$5,000</td>
+              <td>June 30, 2026</td>
+              <td>3.2+</td>
+              <td><a href="#" target="_blank">Apply</a></td>
+            </tr>
+            <tr>
+              <td>Justice for All Scholarship</td>
+              <td>$1,500</td>
+              <td>November 15, 2025</td>
+              <td>2.8+</td>
+              <td><a href="#" target="_blank">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Legal Career Hub</h4>
+        <p>Empowering future legal professionals with resources, guidance, and opportunities.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#career-paths">Career Paths</a></li>
+          <li><a href="#timeline">Path to Law School</a></li>
+          <li><a href="#scholarships">Scholarships</a></li>
+          <li><a href="virginia.html">Virginia Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@legalcareerhub.com">info@legalcareerhub.com</a></p>
+        <p>Last updated: November 2025</p>
+      </div>
+    </div>
+    <div style="margin-top:20px;text-align:center;font-size:14px;">&copy; 2025 Legal Career Hub. All rights reserved.</div>
   </footer>
-
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
