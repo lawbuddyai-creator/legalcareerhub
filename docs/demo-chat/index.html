@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>AI Chat Demo — CommonCounsel AI</title>
+  <meta name="description" content="Production-style AI chat demo with guardrails. Virginia-focused legal information only." />
+  <link rel="icon" href="/legalcareerhub/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/legalcareerhub/assets/styles.css" />
+  <meta property="og:title" content="AI Chat Demo — CommonCounsel AI" />
+  <meta property="og:description" content="Production-style AI chat demo with guardrails. Virginia-focused legal information only." />
+  <meta property="og:type" content="website" />
+  
+</head>
+<body>
+  <header class="header">
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="/legalcareerhub/" aria-label="CommonCounsel AI home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <b>CommonCounsel AI</b><br/>
+          <span class="small">Virginia-focused legal information</span>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/legalcareerhub/">Home</a>
+<a href="/legalcareerhub/product/">Product</a>
+<a href="/legalcareerhub/demo-chat/">Demo Chat</a>
+<a href="/legalcareerhub/demo-document/">Doc Reader</a>
+<a href="/legalcareerhub/pricing/">Pricing</a>
+<a href="/legalcareerhub/resources/">Resources</a>
+<a href="/legalcareerhub/about/">About</a>
+<a href="/legalcareerhub/contact/">Contact</a>
+      </nav>
+
+      <div class="navactions">
+        <button class="iconbtn" id="themeToggle" onclick="toggleTheme()" aria-label="Switch theme" title="Toggle theme">
+          <span class="themeLabel">Dark</span>
+        </button>
+        <a class="btn primary small" href="/legalcareerhub/demo-chat/">Try AI Chat Demo</a>
+        <button class="iconbtn mobiletoggle" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+
+    <nav class="mobilemenu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="/legalcareerhub/">Home</a>
+<a href="/legalcareerhub/product/">Product</a>
+<a href="/legalcareerhub/demo-chat/">Demo Chat</a>
+<a href="/legalcareerhub/demo-document/">Doc Reader</a>
+<a href="/legalcareerhub/pricing/">Pricing</a>
+<a href="/legalcareerhub/resources/">Resources</a>
+<a href="/legalcareerhub/about/">About</a>
+<a href="/legalcareerhub/contact/">Contact</a>
+      <div class="divider"></div>
+      <a href="/legalcareerhub/privacy/">Privacy</a>
+      <a href="/legalcareerhub/terms/">Terms</a>
+    </nav>
+  </div>
+</header>
+  <main>
+    
+<section class="section">
+  <div class="container">
+    <div class="badge dot reveal"><span id="demoBadge">This is a demo</span></div>
+    <div style="height:12px"></div>
+    <h1 class="h1 reveal">AI Chat Demo</h1>
+    <p class="lede reveal">A production-style chat experience with visible safety boundaries. The assistant provides structured legal information (Virginia framing) and refuses legal advice.</p>
+
+    <div class="disclaimer reveal" role="note">
+      <div class="icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86l-8.1 14.02A2 2 0 0 0 3.9 21h16.2a2 2 0 0 0 1.72-3.12l-8.1-14.02a2 2 0 0 0-3.44 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <strong>Privacy reminder:</strong> Don’t share sensitive personal information (SSNs, account numbers, full addresses, case numbers). Use general descriptions or short, non-sensitive excerpts.
+      </div>
+    </div>
+
+    <div style="height:16px"></div>
+
+    <div class="chatWrap">
+      <div class="stack">
+        <div class="chatLog" id="chatLog" aria-label="Chat conversation"></div>
+
+        <div class="typing" id="typing" hidden>
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="small">Generating demo response…</div>
+        </div>
+
+        <div class="chatComposer">
+          <label class="stack" style="gap:8px; width:100%">
+            <span class="small"><b>Message</b> <span class="small">(press <span class="kbd">⌘</span> + <span class="kbd">Enter</span> to send)</span></span>
+            <textarea class="textarea" id="chatInput" placeholder="Ask a Virginia-focused legal information question. Example: “What does ‘cure period’ mean in a Virginia lease?”"></textarea>
+            <span class="small">
+              Not a law firm • Not legal advice • Consult a licensed Virginia attorney for advice.
+            </span>
+          </label>
+          <button class="btn primary" id="sendBtn" aria-label="Send message">Send</button>
+        </div>
+      </div>
+
+      <aside class="stack">
+        <div class="card pad">
+          <h3 class="h3">Suggested prompts</h3>
+          <div class="small">Click to paste:</div>
+          <div class="stack" style="gap:10px; margin-top:10px">
+            <button class="btn" type="button" onclick="document.getElementById('chatInput').value='Explain what “unlawful detainer” means in Virginia.'">Explain “unlawful detainer” (VA)</button>
+            <button class="btn" type="button" onclick="document.getElementById('chatInput').value='Summarize this clause in plain English: Tenant shall provide written notice within 30 days…'">Summarize a clause</button>
+            <button class="btn" type="button" onclick="document.getElementById('chatInput').value='What questions should I ask a lawyer about an auto-renewal clause in a contract?'">Questions to ask a lawyer</button>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 class="h3">Guardrails (visible)</h3>
+          <ul>
+            <li>Refuses “Tell me what to do” requests</li>
+            <li>Flags urgency and suggests attorney help</li>
+            <li>Encourages non-sensitive inputs only</li>
+            <li>Provides options as information, not directives</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer">
+  <div class="container">
+    <div class="footergrid">
+      <div class="stack" style="gap:10px">
+        <div class="row" style="gap:10px">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <b>CommonCounsel AI</b><div class="small">Virginia-focused legal information + document understanding</div>
+          </div>
+        </div>
+        <div class="small">
+          Built with production-grade engineering practices: performance, accessibility, and security-first.
+        </div>
+        <div class="small">
+          <b>Made by:</b> Aryan Patel • <a href="mailto:ary.pat.2009@gmail.com">ary.pat.2009@gmail.com</a> • <a href="tel:+12406210845">+1 (240)-621-0845</a>
+        </div>
+      </div>
+
+      <div class="stack" style="gap:8px">
+        <b>Product</b>
+        <a href="/legalcareerhub/product/">What it does</a>
+        <a href="/legalcareerhub/demo-chat/">AI Chat Demo</a>
+        <a href="/legalcareerhub/demo-document/">Document Reader</a>
+        <a href="/legalcareerhub/pricing/">Pricing</a>
+      </div>
+
+      <div class="stack" style="gap:8px">
+        <b>Legal</b>
+        <a href="/legalcareerhub/privacy/">Privacy Policy</a>
+        <a href="/legalcareerhub/terms/">Terms of Use</a>
+        <div class="legal">
+          Not a law firm. Not a lawyer. Not legal advice. No attorney-client relationship is created by using this site.
+          If you need legal advice, consult a licensed Virginia attorney.
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">© 2026 CommonCounsel AI. All rights reserved.</div>
+  </div>
+</footer>
+  <script src="/legalcareerhub/assets/site.js" defer></script>
+  <script src="/legalcareerhub/assets/demo-chat.js" defer></script>
+</body>
+</html>
